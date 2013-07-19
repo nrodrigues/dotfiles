@@ -87,9 +87,11 @@ set wildignore=*.o,*~,*.pyc
 if has("win16") || has("win32")
     set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
     set wildignore+=*/build/*,*/target/*,*/bin/*,*/eclipse-classes/*
+    set wildignore+=*/node_modules/*
 else
     set wildignore+=.git\*,.hg\*,.svn\*
     set wildignore+=build\*,target\*,bin\*,eclipse-classes\*
+    set wildignore+=node_modules\*
 endif
 
 "Always show current position
