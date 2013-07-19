@@ -1,5 +1,9 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Maintainer: 
+" Maintainer:
+"       Nelson Rodrigues
+"       https://github.com/nrodrigues
+"
+" Author: 
 "       Amir Salihefendic
 "       http://amix.dk - amix@amix.dk
 "
