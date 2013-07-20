@@ -13,6 +13,6 @@ git clone https://github.com/nrodrigues/dotfiles.git
 * Link the files into your home directory
 ```sh
 cd ~
-ln ~/Documents/dotfiles/vimrc .vimrc
+ln -s ~/Documents/dotfiles/vimrc .vimrc
 ln -s ~/Documents/vim .vim
 ```
