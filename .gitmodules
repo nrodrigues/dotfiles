@@ -4,3 +4,6 @@
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+[submodule "terminal/colors/solarized"]
+	path = terminal/colors/solarized
+	url = https://github.com/tomislav/osx-terminal.app-colors-solarized
