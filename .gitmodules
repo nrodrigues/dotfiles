@@ -7,3 +7,6 @@
 [submodule "terminal/colors/solarized"]
 	path = terminal/colors/solarized
 	url = https://github.com/tomislav/osx-terminal.app-colors-solarized
+[submodule "vim/bundle/vim-colors-solarized"]
+	path = vim/bundle/vim-colors-solarized
+	url = https://github.com/altercation/vim-colors-solarized
