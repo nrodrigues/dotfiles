@@ -155,6 +155,16 @@ try
 catch
 endtry
 
+" Solarized theme for airline theme
+let g:airline_theme="solarized"
+
+" Replace default airline separator with blanks
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" Use powerline patched fonts with airline
+let g:airline_powerline_fonts = 1
+
 set background=dark
 
 " Set extra options when running in GUI mode
