@@ -99,11 +99,13 @@ else
     set wildignore+=node_modules\*
 endif
 
-"Always show current position
-set ruler
+"Never show current position
+"or current mode, they're handled by airline
+set noruler
+set noshowmode
 
 " Height of the command bar
-set cmdheight=2
+set cmdheight=1
 
 " A buffer becomes hidden when it is abandoned
 set hid
