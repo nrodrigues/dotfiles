@@ -27,7 +27,6 @@
 "       http://amix.dk/vim/vimrc.txt
 "
 " Sections:
-"    -> Pathogen
 "    -> General
 "    -> VIM user interface
 "    -> Colors and Fonts
@@ -40,16 +39,10 @@
 "    -> vimgrep searching and cope displaying
 "    -> Spell checking
 "    -> Misc
+"    -> Load additional vimrc settings if it exists
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Pathogen
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Loads Pathogen which then autoloads all plugins in .vim/bundle
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
@@ -99,10 +92,8 @@ else
     set wildignore+=node_modules\*
 endif
 
-"Never show current position
-"or current mode, they're handled by airline
-set noruler
-set noshowmode
+"Show the ruler
+set ruler
 
 " Height of the command bar
 set cmdheight=1
@@ -154,19 +145,9 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme solarized
+    colorscheme desert
 catch
 endtry
-
-" Solarized theme for airline theme
-let g:airline_theme="solarized"
-
-" Replace default airline separator with blanks
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-
-" Use powerline patched fonts with airline
-let g:airline_powerline_fonts = 1
 
 set background=dark
 
@@ -371,6 +352,13 @@ map <leader>q :e ~/buffer<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Load additional vimrc settings if it exists
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if filereadable(expand("~/.vim/vimrc"))
+  source ~/.vim/vimrc
+endif
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

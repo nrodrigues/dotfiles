@@ -1,0 +1,43 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Extended vimrc, complements the basic settings from vimrc
+" with plugins and colorschemes and whatnot
+"
+" Sections:
+"    -> Pathogen
+"    -> VIM user interface
+"    -> Colors and Fonts
+"
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Loads Pathogen which then autoloads all plugins in .vim/bundle
+runtime bundle/vim-pathogen/autoload/pathogen.vim
+execute pathogen#infect()
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => VIM user interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Never show current position
+" or current mode, they're handled by airline
+set noruler
+set noshowmode
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Colors and Fonts
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+colorscheme solarized
+
+" Solarized theme for airline theme
+let g:airline_theme="solarized"
+
+" Replace default airline separator with blanks
+let g:airline_left_sep=''
+let g:airline_right_sep=''
+
+" Use powerline patched fonts with airline
+let g:airline_powerline_fonts = 1
+
+

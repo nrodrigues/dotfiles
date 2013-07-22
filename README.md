@@ -29,6 +29,11 @@ ln -s ~/Documents/vim .vim
 
 * Basic vimrc from https://github.com/amix/vimrc
   * A lot of cool shortcuts and basic settings that should be on by default
+  * This file is portable, in the sense that it does not depend on any plugins
+  * Sources .vim/vimrc if the file exists, where plugin settings should reside
+
+* Extended vimrc in .vim/vimrc
+  * Enables pathogen and settings for the rest of the plugins
 
 * vim-pathogen from https://github.com/tpope/vim-pathogen
   * Autoloads all plugins in .vim/bundle
