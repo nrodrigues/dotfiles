@@ -1,6 +1,7 @@
 # dotfiles
 
-These are my personal dotfiles I use to maintain my Vim installation.
+This repository keeps the dotfiles I use to my terminal looking nice and pretty.
+Mainly these consist of customizations to Vim.
 
 ## Installation
 
