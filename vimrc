@@ -226,6 +226,10 @@ map <leader>bd :Bclose<cr>
 " Close all the buffers
 map <leader>ba :1,1000 bd!<cr>
 
+" Easy buffer movement
+map <C-j> :bn<cr>
+map <C-k> :bp<cr>
+
 " Useful mappings for managing tabs
 map <leader>tn :tabnew<cr>
 map <leader>to :tabonly<cr>
@@ -233,6 +237,7 @@ map <leader>tc :tabclose<cr>
 map <leader>tm :tabmove
 map <leader>t<leader> :tabnext
 
+" Easy tab movement
 map <C-h> :tabprev<cr>
 map <C-l> :tabnext<cr>
 
