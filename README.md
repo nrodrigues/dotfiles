@@ -11,6 +11,13 @@ cd ~/Documents
 git clone https://github.com/nrodrigues/dotfiles.git
 ```
 
+* Fetch submodules
+```sh
+cd ~/Documents/dotfiles
+git submodule init
+git submodule update
+```
+
 * Link the files into your home directory
 ```sh
 cd ~
