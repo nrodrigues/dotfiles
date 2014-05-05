@@ -28,6 +28,7 @@ set noshowmode
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:solarized_termtrans=1
 colorscheme solarized
 
 " Solarized theme for airline theme
