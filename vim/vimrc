@@ -35,11 +35,11 @@ colorscheme solarized
 let g:airline_theme="solarized"
 
 " Replace default airline separator with blanks
-let g:airline_left_sep=''
-let g:airline_right_sep=''
+" let g:airline_left_sep=''
+" let g:airline_right_sep=''
 
-let g:airline#extensions#tabline#left_sep = ''
-let g:airline#extensions#tabline#left_alt_sep = '|'
+" let g:airline#extensions#tabline#left_sep = ''
+" let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " Use powerline patched fonts with airline
 let g:airline_powerline_fonts = 1
@@ -52,3 +52,4 @@ let g:airline#extensions#tabline#enabled = 1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Some vim plugins aren't exactly compatible with the fish shell
 :set shell=/bin/bash
+
