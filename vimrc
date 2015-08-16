@@ -225,7 +225,7 @@ map <silent> <leader><cr> :noh<cr>
 map <leader>bd :Bclose<cr>
 
 " Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
+map <leader>ba :bufdo bd!<cr>
 
 " Easy buffer movement
 map <C-j> :bn<cr>
@@ -257,12 +257,12 @@ catch
 endtry
 
 " Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
+"autocmd BufReadPost *
+"     \ if line("'\"") > 0 && line("'\"") <= line("$") |
+"     \   exe "normal! g`\"" |
+"     \ endif
 " Remember info about open buffers on close
-set viminfo^=%
+" set viminfo^=%
 
 
 """"""""""""""""""""""""""""""
