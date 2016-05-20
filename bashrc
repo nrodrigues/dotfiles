@@ -22,7 +22,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -53,17 +53,45 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+# check what environment we're currently logged into
+case "$HOSTNAME" in
+    *.dev.*) ENV=DEV
+        ;;
+    *.build.*) ENV=BUILD
+        ;;
+    *.stg.*) ENV=STG
+        ;;
+    *.stg) ENV=STG
+        ;;
+    *) ENV=PROD
+        ;;
+esac
+
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\[\033[01;36m\]\h\[\033[00m\] \[\033[01;32m\]\w\[\033[00m\]> '
+    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\[\033[01;36m\]$(echo $HOSTNAME|sed s/.thousandeyes.com//)\[\033[00m\] \[\033[01;32m\]\w\[\033[00m\]> '
+
+    DEV="\[\e[1;32m\][dev]\[\e[0m\] "
+    BUILD="\[\e[1;32m\][build]\[\e[0m\] "
+    STG="\[\e[1;32m\][stg]\[\e[0m\] "
+    PROD="\[\e[1;31m\][prod]\[\e[0m\] "
+    PS1="${!ENV}${PS1}"
 else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
+    DEV="[dev] "
+    STG="[stg] "
+    BUILD="[build] "
+    PROD="[prod] "
+    PS1='${!ENV}${debian_chroot:+($debian_chroot)}\u@$(echo $HOSTNAME|sed s/.thousandeyes.com//):\w\$ '
 fi
 unset color_prompt force_color_prompt
 
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
 xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+    DEV="[dev] "
+    STG="[stg] "
+    BUILD="[build] "
+    PROD="[prod] "
+    PS1="\[\e]0;${!ENV} ${debian_chroot:+($debian_chroot)}\u@$(echo $HOSTNAME|sed s/.thousandeyes.com//): \w\a\]$PS1"
     ;;
 *)
     ;;
