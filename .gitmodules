@@ -3,7 +3,7 @@
 	url = https://github.com/tpope/vim-pathogen
 [submodule "vim/bundle/ctrlp.vim"]
 	path = vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
+    url = https://github.com/ctrlpvim/ctrlp.vim
 [submodule "terminal/colors/solarized"]
 	path = terminal/colors/solarized
 	url = https://github.com/nrodrigues/osx-terminal.app-colors-solarized.git
