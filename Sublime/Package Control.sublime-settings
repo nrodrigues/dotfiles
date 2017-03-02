@@ -1,0 +1,33 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AngularJS",
+		"Base Encoder",
+		"ChangeQuotes",
+		"CMake",
+		"Compare Side-By-Side",
+		"DocBlockr",
+		"Git",
+		"Gradle_Language",
+		"Indent XML",
+		"Markdown Preview",
+		"Package Control",
+		"Pretty JSON",
+		"Sass",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint",
+		"SublimeLinter-jscs",
+		"SublimeLinter-jshint",
+		"SublimeOnSaveBuild",
+		"Theme - Afterglow",
+		"Theme - Soda",
+		"Theme - Spacegray",
+		"TrailingSpaces",
+		"URLEncode"
+	]
+}
