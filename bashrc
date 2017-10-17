@@ -53,6 +53,7 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
+HOSTNAME=`hostname -f`
 # check what environment we're currently logged into
 case "$HOSTNAME" in
     *.dev.*) ENV=DEV
@@ -60,8 +61,6 @@ case "$HOSTNAME" in
     *.build.*) ENV=BUILD
         ;;
     *.stg.*) ENV=STG
-        ;;
-    *.stg) ENV=STG
         ;;
     *) ENV=PROD
         ;;
