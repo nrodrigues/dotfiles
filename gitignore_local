@@ -1,0 +1,13 @@
+*~
+.DS_Store
+config.dev.json
+GebConfig.groovy
+*.sublime-*
+.atom-build.json
+.vscode
+.netrwhist
+
+.project
+.settings/
+.classpath
+

@@ -1,0 +1,45 @@
+[user]
+	name = Nelson Rodrigues
+	email = nelson@thousandeyes.com
+[core]
+	excludesfile = /Users/nelson/.gitignore_global
+[difftool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/kdiff3.app/Contents/MacOS/kdiff3 \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[color]
+    ui = auto
+[color "diff"]
+    meta = yellow bold
+    commit = green bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+    whitespace = red reverse
+[push]
+    default = current
+[alias]
+    ul = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%aN <%aE>%Creset' --abbrev-commit --date=relative
+[merge]
+    tool = kdiff3
+[mergetool "kdiff3"]
+    path = /Applications/kdiff3.app/Contents/MacOS/kdiff3
+    trustExitCode = false
+    keepbackup = false
+[filter "lfs"]
+    clean = git-lfs clean %f
+    smudge = git-lfs smudge %f
+    required = true
+[pager]
+    diff = diff-so-fancy | less --tabs=4 -RFX
+    show = diff-so-fancy | less --tabs=4 -RFX
+[filesystem "Oracle Corporation|1.8.0_144|/dev/disk1s1"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[filesystem "Oracle Corporation|1.8.0_144|/dev/disk1s5"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[pull]
+	rebase = false
